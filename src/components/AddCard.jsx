@@ -1,6 +1,7 @@
-import { Box, Button, Input, Radio, Stack, Text } from "@chakra-ui/react"
+import { Box, Button, Image, Input, Radio, Stack, Text } from "@chakra-ui/react"
 import { useState } from "react"
 import { ATMCARDBOX } from "./ATMCardBox"
+import paymentProcessor from "../assets/payment-org.png"
 
 const INPUT_STYLE = {
   bg: "#f3f3f3",
@@ -34,6 +35,12 @@ export const AddCard = () => {
         <ATMCARDBOX {...cardDetails} />
       </Box>
       <Stack spacing="20px">
+        <Image
+          alignSelf={["center", "flex-end"]}
+          width="150px"
+          src={paymentProcessor}
+          alt="payment processor"
+        />
         <Stack
           direction={["column", "column", "column", "row"]} //for mobile responsiveness
           alignItems="center"
