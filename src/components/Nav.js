@@ -15,7 +15,12 @@ export const Nav = () => {
       >
         {NAV_LIST.map((data, id) => {
           return (
-            <Text color="grey" fontWeight="bold" key={id}>
+            <Text
+              color="grey"
+              fontWeight="bold"
+              key={id}
+              fontSize={[".9em", "1em"]} //for mobile responsiveness
+            >
               {data}
             </Text>
           )
